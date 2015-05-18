@@ -1,12 +1,11 @@
 class CustomCell < PM::TableViewCell
-	attr_accessor :input_text
 
   def on_load
-    @user_text = rmq.append(UITextField, :input_text_style)
+    @price = rmq.append(UILabel, :custom_text_style)
     rmq.all.reapply_styles
   end
 
-  def input_text= some_text
-    @user_text.get.text = some_text
+  def custom_text= some_text
+    @price.data = some_text
   end
 end

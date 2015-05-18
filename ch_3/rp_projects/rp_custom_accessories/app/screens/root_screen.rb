@@ -13,9 +13,12 @@ class RootScreen < PM::TableScreen
       cells:
       [{
         title: "This is Cell 1",
+        subtitle: "Subtitle",
+        properties: {custom_text: "$3.00"},
+        accessory_type: :disclosure_indicator,
         cell_class: CustomCell,
       	},
-      	{
+        {
         title: "This is Cell 2",
         cell_class: CustomCell,
       }]
